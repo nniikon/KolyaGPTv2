@@ -36,10 +36,10 @@ public:
     const char* name() const override { return "MSELoss"; }
 
     void eval_data(GenericMatrix<BasicMatrixData<T>>& matrix) const override {
-        assert(dad_.data().rows() == mom_.data().rows() && 
+        assert(dad_.data().rows() == mom_.data().rows() &&
                dad_.data().cols() == mom_.data().cols() &&
                "Input dimensions must match for MSELoss");
-        assert(matrix.data().rows() == 1 && matrix.data().cols() == 1 && 
+        assert(matrix.data().rows() == 1 && matrix.data().cols() == 1 &&
                "MSELoss output must be 1x1 matrix");
 
         const size_t rows = dad_.data().rows();

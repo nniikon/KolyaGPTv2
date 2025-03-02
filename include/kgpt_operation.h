@@ -69,7 +69,7 @@ void BasicMatrixSetGrad(GenericMatrix<BasicMatrixData<T>>& matrix, T value) {
     size_t rows = matrix.data().rows();
     size_t cols = matrix.data().cols();
 
-    for (size_t i = 0; i < rows; i++) {    
+    for (size_t i = 0; i < rows; i++) {
         for (size_t j = 0; j < cols; j++) {
             matrix.grad()[i][j] = value;
         }
