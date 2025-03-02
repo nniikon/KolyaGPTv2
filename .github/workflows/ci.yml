@@ -4,16 +4,12 @@ on: [push, pull_request]
 
 jobs:
   build-and-test:
-    name: Build and Test
     runs-on: ubuntu-24.04
+    container: nniikon/kolyagpt:latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-
-    - name: Install dependencies
-      run: |
-        sudo apt install -y build-essential cmake
 
     - name: Build
       run: |
