@@ -41,7 +41,7 @@ public:
     void eval_data_recursive(GenericMatrix<MatrixData>& matrix) const override {
         dad_.eval_data_recursive();
         mom_.eval_data_recursive();
-        
+
         this->eval_data(matrix);
     }
 
@@ -66,7 +66,7 @@ public:
         mom_.dump(out);
 
         out << "\top" << this << " [label=\" " << name() << "\"];\n";
-        
+
         out << "\t" << "Node" << &dad_ << " -> " << "op" << this << ";\n";
         out << "\t" << "Node" << &mom_ << " -> " << "op" << this << ";\n";
 

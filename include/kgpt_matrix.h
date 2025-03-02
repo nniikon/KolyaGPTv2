@@ -64,13 +64,13 @@ public:
         system(compile_cmd.c_str());
     }
 
-    void reset() { 
+    void reset() {
         data_.clear();
         grad_.clear();
     }
 
     GenericMatrix& operator=(std::unique_ptr<Operation<MatrixData>> operation) {
-        GenericMatrix result(data().rows(), data().cols()); 
+        GenericMatrix result(data().rows(), data().cols());
 
         operation_ = std::move(operation);
 
