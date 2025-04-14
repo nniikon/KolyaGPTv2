@@ -15,7 +15,7 @@ Simply include the headers directly in your code:
 ### Using Docker (Recommended)
 
 ```sh
-podman run --rm -v $(pwd):/app -w /app nniikon/kolyagpt:be294c756548b7e0f20860cd9ca6cb1755f6d9ec \
+podman run --rm -v $(pwd):/app -w /app docker.io/nniikon/kolyagpt:d561fe473123a9290e1a0d44d92de4c630b88f8e \
     sh -c "cmake -B build -S . && cmake --build build --parallel && cd build && ctest --output-on-failure"
 ```
 

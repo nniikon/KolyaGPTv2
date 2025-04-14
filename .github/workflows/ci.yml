@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   build-and-test:
     runs-on: ubuntu-24.04
-    container: nniikon/kolyagpt:be294c756548b7e0f20860cd9ca6cb1755f6d9ec
+    container: nniikon/kolyagpt:d561fe473123a9290e1a0d44d92de4c630b88f8e
 
     steps:
     - name: Checkout
